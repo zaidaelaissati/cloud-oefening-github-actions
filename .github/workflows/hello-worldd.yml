@@ -1,0 +1,11 @@
+name: hello-worldd
+on: push
+jobs:
+  hello-world-job:
+  #in welke vm gaat die draaien
+  runs on: ubuntu-latest
+  steps:
+    - name: Checkout code
+     uses: actions/checkout@v4
+    -name: Print hello world content
+    run: echo "$(cat hello_world.txt)"
